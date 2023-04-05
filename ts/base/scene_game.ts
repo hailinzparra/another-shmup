@@ -33,6 +33,14 @@ scene_game.update = () => {
 }
 
 scene_game.render = () => {
+    const tile_scale = 3
+    const tile_size = 16 * tile_scale
+    const tile_vertical_move = Math.floor(time.t / 10) % tile_size
+    for (let i = stage.w / tile_size; i >= 0; i--) {
+        for (let j = stage.h / tile_size; j >= -1; j--) {
+            draw.strip_transformed('tiles', 50, i * tile_size, j * tile_size + tile_vertical_move, tile_scale, tile_scale, 0)
+        }
+    }
 }
 
 scene_game.render_ui = () => {
