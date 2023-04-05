@@ -1,0 +1,15 @@
+{
+    "type": "module",
+    "scripts": {
+        "init": "npm i",
+        "dev": "node dev/dev",
+        "dev:prod": "node dev/dev --prod"
+    },
+    "private": true,
+    "dependencies": {
+        "fs": "^0.0.1-security",
+        "fs-readdir-recursive": "^1.1.0",
+        "typescript": "^5.0.2",
+        "uglify-js": "^3.17.4"
+    }
+}
